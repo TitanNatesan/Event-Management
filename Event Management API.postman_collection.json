@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "be70a974-1d46-4f2a-b1b0-43ca6e1dd9bc",
+		"name": "Event Management API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31732282"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Marriage\",\r\n    \"description\":\"Test Description for Marriage\",\r\n    \"date\":\"05/15/2025\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/events"
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8000/events/"
+			},
+			"response": []
+		},
+		{
+			"name": "GET BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8000/events/{{vault:ID}}"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT BY ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Marriage\",\r\n    \"description\":\"Updated Test Description for Marriage\",\r\n    \"date\":\"05/22/2025\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/events/{{vault:ID}}"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE BY ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:8000/events/{{vault:ID}}"
+			},
+			"response": []
+		}
+	]
+}
